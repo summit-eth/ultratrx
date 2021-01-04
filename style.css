@@ -1,0 +1,118 @@
+body {
+  font-family: 'Baloo Chettan 2', sans-serif;
+}
+strong {font-weight:800}
+.jumbotron {
+    /*background: linear-gradient(338deg, #f6faf5, #f6f8f7, #ebeff0);
+    background-size: 600% 600%;
+    border-bottom: 10px solid #120301; */
+    position: relative;
+    -webkit-animation: animBg 9s ease infinite;
+    -moz-animation: animBg 9s ease infinite;
+    animation: animBg 9s ease infinite;
+}
+.jumbotron::before {
+  content: ""; display:block;
+  opacity: 10;
+  position: absolute;
+  left:0; top:0; right:0; bottom:0;
+  background: url(img/bg.jpg);
+  background-size: cover;
+}
+.jumbotron.light::before {
+  opacity: 10;
+}
+@-webkit-keyframes animBg {
+    0%{background-position:40% 0%}
+    50%{background-position:61% 100%}
+    100%{background-position:40% 0%}
+}
+@-moz-keyframes animBg {
+    0%{background-position:40% 0%}
+    50%{background-position:61% 100%}
+    100%{background-position:40% 0%}
+}
+@keyframes animBg {
+    0%{background-position:40% 0%}
+    50%{background-position:61% 100%}
+    100%{background-position:40% 0%}
+}
+.jumbotron aside {
+  border-radius: 8px;
+  background-color: #004969;
+  border: 4px solid #fff;
+}
+.pulse-shadow {
+  animation: animPulseShadow 2s ease infinite;
+}
+@-webkit-keyframes animPulseShadow {
+    0%{box-shadow: 0px 0px 1px #909091}
+    70%{box-shadow: 0px 0px 20px #909091}
+    100%{box-shadow: 0px 0px 1px #909091}
+}
+
+#your_investments {
+  max-height: 392px;
+  overflow-y: auto;
+}
+
+section#timetable {
+  position: relative;
+  text-align: center;
+}
+section#timetable hr {
+  position: absolute;
+  top: 25px; left:0; right:0;
+  border-color: white!important;
+  border-width: 2px;
+  border-style: dashed;
+}
+
+section#invest .is_early {
+  position: absolute;
+  top:0; left:0; bottom:0; right:0;
+  text-align: center;
+  display:none;
+  padding-top: 14em;
+}
+section#invest {
+  position: relative;
+}
+section#invest.early .container {
+  filter: blur(3px);
+}
+section#invest.early .is_early { display:block; }
+section#invest.early::after {
+  content: ""; display:block;
+  position: absolute;
+  top:0; left:0; bottom:0; right:0;
+  background-color: rgba(255,255,255,0.3);
+}
+
+@media (max-width: 480px){
+  input { padding: 8px 12px!important; }
+}
+
+/* ADD-ON */
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 120px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 5px;
+  text-align: center;
+}
+
